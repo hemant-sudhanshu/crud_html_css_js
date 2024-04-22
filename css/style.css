@@ -52,32 +52,7 @@ body {
     margin: 0;
     display: flex;
     justify-content: space-around;
-}
-
-@media (max-width: 600px) {
-    .nav-bar, .nav-links {
-        flex-direction: column;
-    }
-    .main-container {
-      flex-direction: column;
-    }
-
-    .nav-bar h3 {
-        text-align: center;
-        padding: 20px 10px;
-    }
-    .nav-links a {
-        text-align: center;
-    }
-
-    .user-form {
-        flex: 1;
-    }
-
-    .detailed-table {
-        flex: 1;
-    }
-
+    padding-top: 30px;
 }
 
 /* Heading */
@@ -185,4 +160,31 @@ tbody {
 
 tr > td > button {
     background-color: transparent;
+}
+
+@media (max-width: 600px) {
+    .nav-bar, .nav-links {
+        flex-direction: column;
+    }
+    .main-container {
+      flex-direction: column;
+      padding-top: 0px;
+    }
+
+    .nav-bar h3 {
+        text-align: center;
+        padding: 20px 10px;
+    }
+    .nav-links a {
+        text-align: center;
+    }
+
+    .user-form {
+        flex: 1;
+    }
+
+    .detailed-table {
+        flex: 1;
+    }
+
 }
