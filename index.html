@@ -3,9 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CRUD</title>
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
-<body>
-    <h1>Title </h1>
+
+<body onload="udateTableData()">
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <h3>CRUD HTML + CSS + JS</h3>
+
+        <!-- Navigation bar links -->
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">News</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+    
+    <!-- Main container -->
+    <div class="main-container">
+        <!-- Form -->
+        <div class="user-form">
+            <form class="form-container">
+                <h3 class="centered-heading">Student's Form</h3>
+                <input type="hidden" id="id" />
+
+                <!-- First Name -->
+                <label class="inputFieldLabel" for="fname">First Name<sup class="required">*</sup></label><br>
+                <input class="inputField" type="text" id="fname" name="fname" value=""><br>
+                <p class="fname-error error-msg"></p>
+                <br />
+
+                <!-- Last Name -->
+                <label class="inputFieldLabel" for="lname">Last Name<sup class="required">*</sup></label><br>
+                <input class="inputField" type="text" id="lname" name="lname" value="">
+                <p class="lname-error error-msg"></p>
+                <br />
+
+                <!-- Email -->
+                <label class="inputFieldLabel" for="email">Email<sup class="required">*</sup></label><br>
+                <input class="inputField" type="email" id="email" name="email" value="">
+                <p class="email-error error-msg"></p>
+                <br />
+
+                <!-- DOB -->
+                <label class="inputFieldLabel" for="dob">D.O.B.<sup class="required">*</sup></label><br>
+                <input class="inputField" type="date" id="dob" name="dob" value="">
+                <p class="dob-error error-msg"></p>
+                <br />
+
+                <!-- Gender -->
+                <label class="inputFieldLabel">Gender</label><br>
+
+                <div>
+                  <input type="radio" value="Male" name="Gender" id="Male" />
+                  <label for="Male" class="margin">Male</label>
+                  <input type="radio" value="Female" name="Gender" id="Female" />
+                  <label for="Female" class="margin">Female</label>
+                </div>
+                <br />
+
+
+                <!-- Class -->
+                <label class="inputFieldLabel" for="class">Class<sup class="required">*</sup></label><br>
+                <select class="inputField" name="class" id="student-class">
+                    <option value="8th">8th</option>
+                    <option value="9th">9th</option>
+                    <option value="10th">10th</option>
+                    <option value="11th">11th</option>
+                    <option value="12th">12th</option>
+                </select>
+                <p class="class-error error-msg"></p>
+                <br />
+
+                <button type="button" class="submit-btn" onclick="onClickSubmit()">Submit</button>
+            </form>
+        </div>
+
+        <!-- Table -->
+        <div class="detailed-table">
+            <h3 class="centered-heading">Students List</h3>
+            <br />
+            <div class="table-parent">
+                <table id="students-list">
+                    <!-- Students data will be displayed here -->
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>DOB</th>
+                            <th>Gender</th>
+                            <th>Class</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script type="text/javascript" src="./js/script.js"></script>
 </body>
 </html>
